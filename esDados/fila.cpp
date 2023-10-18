@@ -21,7 +21,7 @@ class Queue {
 
         void enqueue(int data) {
             if (isFull()) {
-                cout << "A fila está cheia." << endl;
+                cout << "A fila esta cheia." << endl;
                 return;
             } else if (isEmpty()) {
                 front = rear = 0;
@@ -30,50 +30,50 @@ class Queue {
             }
 
             queue[rear] = data;
-            cout << "Cliente com o número " << data " entrou na fila." << endl;
+            cout << "Cliente com o numero " << data << " entrou na fila." << endl;
         }
 
         void dequeue() {
             if (isEmpty()) {
-                cout << "A fila está vazia." << endl;
+                cout << "A fila esta vazia." << endl;
             } else if (front == rear) {
-                cout << "Cliente com o número " << queue[front] << " saiu da fila." << endl;
+                cout << "Cliente com o numero " << queue[front] << " saiu da fila." << endl;
                 front = rear = -1;
             } else {
-                cout << "Cliente com o número " << queue[front] << " saiu da fila." << endl;
+                cout << "Cliente com o numero " << queue[front] << " saiu da fila." << endl;
                 front++;
             }
         }
 
         void display() {
             if (isEmpty()) {
-                cout << "A fila está vazia." << endl;
+                cout << "A fila esta vazia." << endl;
                 return;
             }
             cout << "Fila de clientes: ";
             for (int i = front; i <= rear; i++) {
-                cout << queue[i] << " "
+                cout << queue[i] << " ";
             }
             cout << endl;
-        }
-}
+        };
+};
 
 int main() {
     Queue queue;
     int choice, data;
 
     do {
-        cout << "Escolha uma opção:" << endl;
+        cout << "Escolha uma opcao:" << endl;
         cout << "1. Entrar na fila" << endl;
         cout << "2. Sair da fila" << endl;
         cout << "3. Mostrar a fila" << endl;
         cout << "0. Sair do programa" << endl;
-        
+
         cin >> choice;
 
         switch(choice) {
             case 1:
-                cout << "Digite o número do cliente: ";
+                cout << "Digite o numero do cliente: ";
                 cin >> data;
                 queue.enqueue(data);
                 break;
@@ -87,7 +87,7 @@ int main() {
                 cout << "Encerrando o programa." << endl;
                 break;
             default:
-                cout << "Opção inválida." << endl;
+                cout << "Opção invalida." << endl;
         }
 
         cout << endl;
