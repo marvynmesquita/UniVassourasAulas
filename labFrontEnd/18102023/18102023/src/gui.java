@@ -239,7 +239,6 @@ public class gui extends javax.swing.JFrame {
         menuUsuario.setEnabled(false);
         menuEBooks.setEnabled(false);
         menuEmp.setEnabled(false);
-        btnLogout.setEnabled(false);
     };
     
     public void habilitarBtns() {
@@ -249,7 +248,6 @@ public class gui extends javax.swing.JFrame {
         menuUsuario.setEnabled(true);
         menuEBooks.setEnabled(true);
         menuEmp.setEnabled(true);
-        btnLogout.setEnabled(true);
     }
     
     public void abrirSubFrm() {
@@ -258,10 +256,7 @@ public class gui extends javax.swing.JFrame {
     }
     
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
-        JOptionPane.showMessageDialog(null,"Usuario deslogado");
-        desabilitarBtns();
-        txtUsuario.setText("");
-        txtSenha.setText("");
+        System.exit(0);
     }//GEN-LAST:event_btnLogoutActionPerformed
 
     private void btnUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsuarioActionPerformed
