@@ -1,5 +1,7 @@
 {
+    "editor.formatOnSave": true,
     "files.associations": {
+        "**/templates/**/*.html": "django-html",
         "array": "cpp",
         "atomic": "cpp",
         "bit": "cpp",
@@ -49,5 +51,8 @@
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
     "python.formatting.provider": "none",
-    "C_Cpp.default.compilerPath": "C:\\MinGW\\bin\\gcc.exe"
+    "C_Cpp.default.compilerPath": "C:\\MinGW\\bin\\gcc.exe",
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    }
 }
