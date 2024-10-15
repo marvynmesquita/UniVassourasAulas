@@ -1,0 +1,7 @@
+<h1>Excluir Tarefa?</h1>
+<p>Deseja excluir a tarefa?</p>
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Excluir</button>
+    <a href="{% url 'todo_list' %}" class="btn btn-primary">Cancelar</a>
+</form>

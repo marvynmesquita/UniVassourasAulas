@@ -2,7 +2,7 @@
 URL configuration for setup project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.0/topics/http/urls/
+    https://docs.djangoproject.com/en/5.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -17,19 +17,12 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from todos.views import TodoListView
-from todos.views import TodoCreateView
-from todos.views import TodoUpdateView
-
-urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("", TodoListView.as_view()),
-    path("create", TodoCreateView.as_view()),
-]
+from todos.views import TodoListView, TodoCreateView, TodoUpdateView, TodoDeleteView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", TodoListView.as_view(), name="todo_list"),
-    path("create", TodoCreateView.as_view(), name="todo_create"),
+    path("create/", TodoCreateView.as_view(), name="todo_create"),
     path("update/<int:pk>", TodoUpdateView.as_view(), name="todo_update"),
+    path("delete/<int:pk>", TodoDeleteView.as_view(), name="todo_delete"),
 ]
