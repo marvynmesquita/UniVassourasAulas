@@ -1,0 +1,19 @@
+# Ignorar arquivos do Visual Studio
+.vs/
+.vs2019/
+.vs2017/
+*.vscode/
+# Diretórios de build
+bin/
+obj/
+
+# Arquivos de configuração de usuário (não versionados)
+.idea/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.log
+
+# Arquivos de pacotes NuGet
+packages/
